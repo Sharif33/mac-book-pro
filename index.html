@@ -25,7 +25,7 @@
                         7-core GPU, and
                         16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt/USB 4 ports Magic
                         Mouse
-                        Magic Keyboard - US English</p>
+                        Magic Keyboard - US English.</p>
                 </header>
                 <!-- memory buttons -->
                 <div class="my-4">
@@ -54,6 +54,7 @@
                     <button id="charge-delivery-btn" type="button" class="btn btn-outline-dark">Friday, Aug 21 Delivery
                         charge $20</button>
                 </div>
+                <!-- total count -->
                 <div class="col-md-7">
                     <table class="table fw-bold fs-5">
                         <tbody>
@@ -83,18 +84,17 @@
                     </table>
                     <h5>Add Promo code</h5>
                     <div class="input-group mb-3">
-
                         <input type="text" id="promo-input" class="form-control">
-                        <button class="btn btn-danger" type="button" id="promo-btn">Apply</button>
+                        <button class="btn btn-danger" type="button" id="promo-btn" disabled>Apply</button>
                     </div>
                 </div>
             </div>
         </div>
         <hr>
     </section>
-
+    <!-- All total -->
     <footer class="container text-center my-3">
-        <h1>Total: $ <span>1299</span></h1>
+        <h1>Total: $ <span id="promo-total">1299</span></h1>
     </footer>
 
 
