@@ -1,3 +1,4 @@
+// innerText set of Every 0 cost using function
 
 function extraCostZero(zero) {
     const costZero = document.getElementById(zero);
@@ -6,6 +7,8 @@ function extraCostZero(zero) {
     return priceZero;
 };
 
+// innerText set of Every 180 cost using function
+
 function extraCost180(oneEighty) {
     const costOneEighty = document.getElementById(oneEighty);
     const priceOneEighty = costOneEighty.innerText;
@@ -13,41 +16,36 @@ function extraCost180(oneEighty) {
     return priceOneEighty;
 };
 
-
-// memory buttons 
+// memory buttons updated using event handler
 
 document.getElementById('8gb-memory-btn').addEventListener('click', function () {
     extraCostZero('extra-memory');
-    // const memory = document.getElementById('extra-memory');
-    // memory.innerText = parseInt('0'); 
     updateTotal();
 });
 document.getElementById('16gb-memory-btn').addEventListener('click', function () {
     extraCost180('extra-memory');
-    // const memory = document.getElementById('extra-memory'); memory.innerText = parseInt('180'); 
     updateTotal();
 });
 
-// storage buttons
+// storage buttons updated using event handler
 
 document.getElementById('256gb-storage-btn').addEventListener('click', function () {
-    // const storage = document.getElementById('extra-storage'); storage.innerText = parseInt('0');
     extraCostZero('extra-storage');
     updateTotal();
 });
 document.getElementById('512gb-storage-btn').addEventListener('click', function () {
-    const storage = document.getElementById('extra-storage'); storage.innerText = parseInt('100'); updateTotal();
+    const storage = document.getElementById('extra-storage');
+    storage.innerText = parseInt('100');
+    updateTotal();
 });
 document.getElementById('1tb-storage-btn').addEventListener('click', function () {
-    extraCost180('extra-storage')
-    // const storage = document.getElementById('extra-storage'); storage.innerText = parseInt('180'); 
+    extraCost180('extra-storage');
     updateTotal();
 });
 
-//shipping buttons
+//shipping buttons updated using event handler
 
 document.getElementById('free-delivery-btn').addEventListener('click', function () {
-    // const delivery = document.getElementById('delivery-charge'); delivery.innerText = parseInt('0'); 
     extraCostZero('delivery-charge');
     updateTotal();
 });
@@ -57,7 +55,8 @@ document.getElementById('charge-delivery-btn').addEventListener('click', functio
     updateTotal();
 });
 
-//update total
+//update total 
+
 function updateTotal() {
     const memoryCharge = document.getElementById('extra-memory').innerText;
     const storageCharge = document.getElementById('extra-storage').innerText;
@@ -67,7 +66,6 @@ function updateTotal() {
     document.getElementById('total-price').innerText = total;
     document.getElementById('promo-total').innerText = total;
 };
-
 
 // promo code Use and 20% discount  
 
